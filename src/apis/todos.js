@@ -14,11 +14,11 @@ export const addTodoData = async (todo) => {
 };
 
 export const deleteTodoData = async (id) => {
-  await axios.delete(`${todoDataUrl}/${id}}`);
+  await axios.delete(`${todoDataUrl}/${id}`);
   return id;
 };
 
 export const updateTodoData = async (id, todo) => {
-  const response = await axios.put(`${todoDataUrl}/${id}}`, todo);
+  const response = await axios.put(`${todoDataUrl}/${id}`, todo);
   return response.data;
 };

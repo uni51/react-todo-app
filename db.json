@@ -18,12 +18,7 @@
     {
       "content": "todo-upを作成する",
       "id": "01G96RST1PMXH0KEHNEJB21WA1",
-      "done": false
-    },
-    {
-      "content": "todo-upにテスト投稿してみる",
-      "id": "01G96RTFTGJ9ZFKMF6ZHYJ8MCB",
-      "done": false
+      "done": true
     },
     {
       "content": "TodoAddコンポーネントを作成する",

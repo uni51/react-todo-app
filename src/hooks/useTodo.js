@@ -1,13 +1,12 @@
 import { useState, useEffect } from "react";
+
 import { ulid } from "ulid";
 
-import * as todoData from "../apis/todo";
+import * as todoData from "../apis/todos";
 
-// カスタムフック
 export const useTodo = () => {
   const [todoList, setTodoList] = useState([]);
 
-  // useEffectを利用して、コンポーネントのマウント後またはアンマウント後にモックサーバーとの通信処理を行う。
   useEffect(() => {
     todoData.getAllTodosData().then((todo) => {
       setTodoList([...todo].reverse());
@@ -15,10 +14,8 @@ export const useTodo = () => {
   }, []);
 
   const toggleTodoListItemStatus = (id, done) => {
-    const todoItem = todoList.filter((item) => item.id === id);
-
+    const todoItem = todoList.find((item) => item.id === id);
     const newTodoItem = { ...todoItem, done: !done };
-
     todoData.updateTodoData(id, newTodoItem).then((updatedTodo) => {
       const newTodoList = todoList.map((item) =>
         item.id !== updatedTodo.id ? item : updatedTodo
@@ -33,7 +30,6 @@ export const useTodo = () => {
       id: ulid(),
       done: false,
     };
-
     return todoData.addTodoData(newTodoItem).then((addTodo) => {
       setTodoList([addTodo, ...todoList]);
     });
