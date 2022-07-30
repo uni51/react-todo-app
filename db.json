@@ -1,19 +1,34 @@
 {
-	"todos": [
-		{
-			"id": 1,
-			"content": "Create React app をインストールする",
-			"done": true
-		},
-		{
-			"id": 2,
-			"content": "JSON Server仮のAPIを作成する",
-			"done": false
-		},
-		{
-			"id": 3,
-			"content": "Chakura UIをインストールする",
-			"done": false
-		}
-	]
+  "todos": [
+    {
+      "id": 1,
+      "content": "Create React app をインストールする",
+      "done": true
+    },
+    {
+      "id": 2,
+      "content": "JSON Server仮のAPIを作成する",
+      "done": false
+    },
+    {
+      "id": 3,
+      "content": "Chakura UIをインストールする",
+      "done": false
+    },
+    {
+      "content": "todo-upを作成する",
+      "id": "01G96RST1PMXH0KEHNEJB21WA1",
+      "done": false
+    },
+    {
+      "content": "todo-upにテスト投稿してみる",
+      "id": "01G96RTFTGJ9ZFKMF6ZHYJ8MCB",
+      "done": false
+    },
+    {
+      "content": "TodoAddコンポーネントを作成する",
+      "id": "01G96S0ABQ3NR0RJVQD1Q6HB6V",
+      "done": false
+    }
+  ]
 }
